@@ -1,15 +1,11 @@
 import { app, Component } from 'apprun';
-import Comic from '../../components/comic';
+import Comic from '../components/comic';
 
 export default class extends Component {
-  state = 'sub component'
+  state = 'This is an AppRun sub component'
 
   view = state => <>
-    <div>
-      {state}
-      <Comic />
-    </div>
-  </>
-  update = {
-  }
+    {state}
+    <Comic />
+  </>;
 }

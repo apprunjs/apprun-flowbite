@@ -7,7 +7,7 @@
   "scripts": {
     "build": "apprun-site build -c",
     "start": "node server.js",
-    "dev": "apprun-site build -w",
+    "dev": "apprun-site dev -w",
     "build:docker-image": "docker build -t test-apprun-site .",
     "run:docker-image": "docker run -p 8080:8080 test-apprun-site",
     "build:zip": "zip -r project_archive.zip public/ api/ server.js package*.json"

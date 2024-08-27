@@ -1,3 +1,3 @@
-This is a demo page to display a comic from XKCD using web component.
+This is a markdown page that uses web component to display a comic from XKCD.
 
 <ws-comic></ws-comic>

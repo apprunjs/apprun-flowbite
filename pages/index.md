@@ -1,23 +1,26 @@
-This site is built with [AppRun-Site](https://github.com/yysun/apprun-site), a command-line tool for building modern web applications with [AppRun](https://github.com/yysun/apprun).
+This site is built with [AppRun-Site](https://github.com/yysun/apprun-site) and [Flowbite](https://flowbite.com/). It has the following structure:
 
-It has the following structure:
 ```
-/components
-  /comic.tsx        <- demo component
-  /layout.tsx       <- layout component
-/pages              <- pages of the website
+/api                <- backend code
+  /comic.js         <- demo API
+/pages              <- fronet end code
+  /index.html       <- main page, load in the browser
   /index.md         <- home page
-  /main.tsx         <- start up code (registers web component and renders the layout)
-  /contact
-    /index.tsx      <- contact page
   /about
     /index.md       <- about page
-  /index.html       <- main page
-/public             <- generated src
+  /contact
+    /index.tsx      <- contact page
+  /components
+    /comic.tsx      <- demo component
+    /layout.tsx     <- layout component
+  /main.tsx         <- start up code, renders the layout
+/public             <- generated site for production
 /server.js          <- generated server
 ```
 
-You can add pages to the directory `pages`; they can be HTML files, markdown files, and tsx/jsx files (AppRun components).
+You can add pages under the `pages` directory by creating sub-directories.
+
+Add an index file such as _index.html_, _index.md_, _index.jsx_, or _index.tsx_ in the sub-directory, it will be created as a page.
 
 Then, you can use:
 
