@@ -1,7 +1,7 @@
 import { app, Component } from 'apprun';
 export default class Comic extends Component {
   state = async () => {
-    const response = await fetch('/api/comic');
+    const response = await fetch('/api/comic', { method: 'POST',  });
     return response.json();
   }
 
