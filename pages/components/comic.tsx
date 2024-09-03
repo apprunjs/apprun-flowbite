@@ -1,9 +1,18 @@
 import { app, Component } from 'apprun';
-export default class Comic extends Component {
-  state = async () => {
-    const response = await fetch('/api/comic', { method: 'POST',  });
-    return response.json();
-  }
+import  action  from '../action';
 
-  view = ({ img }) => img ? <img src={img} /> : `Loading...`;
+const get_a_comic = () => action('/api/comic');
+
+export default class Comic extends Component {
+  // state = async () => {
+  //   const response = await fetch('/api/comic', { method: 'POST',  });
+  //   return response.json();
+  // }
+
+  state = get_a_comic;
+
+  view = ({ img }) => img ? <>
+    <img src={img} />
+    <div><button $onclick={get_a_comic}>Get a new one</button></div>
+  </> : `Loading...`;
 }
