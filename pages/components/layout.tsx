@@ -120,9 +120,8 @@ export default () => {
         </div>
       </nav>
 
-
       <div class="grow flex p-2 bg-white dark:bg-gray-600 dark:text-white">
-        <div class="grow p-4" id="my-app"></div>
+        <div class="grow p-4" id="main-app"></div>
       </div>
     </div>
   </div>

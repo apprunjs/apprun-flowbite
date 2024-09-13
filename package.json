@@ -1,13 +1,13 @@
 {
-  "name": "test-apprun-site",
+  "name": "apprun-flowbite",
   "version": "1.0.0",
-  "description": "This site is built with [AppRun-Site](https://github.com/yysun/apprun-site), a command-line tool for building modern web applications with [AppRun](https://github.com/yysun/apprun).",
+  "description": "This site is built with [AppRun-Site](https://github.com/yysun/apprun-site).",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "cross-env NODE_ENV=production apprun-site build -c",
-    "start": "node server.js",
-    "dev": "apprun-site dev",
+    "build": "cross-env NODE_ENV=production apprun-site build -cr",
+    "start": "node --watch --watch-path=public server.js",
+    "dev": "apprun-site build -r -w",
     "build:docker-image": "docker build -t apprun-flowbite .",
     "run:docker-image": "docker run -p 8080:8080 apprun-flowbite",
     "build:zip": "zip -r deploy.zip public/ api/ server.js package*.json"
@@ -16,11 +16,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "apprun": "^3.33.7",
-    "apprun-site": "^1.3.10",
+    "apprun": "^3.33.8",
+    "apprun-site": "^1.3.21",
     "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
-    "postcss": "^8.4.41",
-    "tailwindcss": "^3.4.10"
+    "postcss": "^8.4.45",
+    "tailwindcss": "^3.4.11"
   }
 }

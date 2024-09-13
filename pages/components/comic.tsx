@@ -1,13 +1,8 @@
 import { app, Component } from 'apprun';
-import  action  from '../action';
+import get_a_comic  from '../../_/comic';
 
-const get_a_comic = () => action('/api/comic');
 
 export default class Comic extends Component {
-  // state = async () => {
-  //   const response = await fetch('/api/comic', { method: 'POST',  });
-  //   return response.json();
-  // }
 
   state = get_a_comic;
 
