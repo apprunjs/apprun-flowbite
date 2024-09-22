@@ -1,8 +1,8 @@
 This site is built with [AppRun-Site](https://github.com/yysun/apprun-site) and [Flowbite](https://flowbite.com/). It has the following structure:
 
 ```
-/api                <- backend code
-  /comic.js         <- demo API
+/_                  <- backend
+  /comic.js         <- demo backend
 /pages              <- fronet end code
   /index.html       <- main page, load in the browser
   /main.tsx         <- start up code, renders the layout
